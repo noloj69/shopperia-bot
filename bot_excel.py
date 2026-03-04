@@ -223,7 +223,8 @@ async def export_excel(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
 # ---------------- Main ----------------
 def main():
-    TOKEN = "7408832099:AAFam5lVryt8gmQAR_up4eYsnGIpqL2jfco"
+    import os
+TOKEN = os.environ.get("7408832099:AAGYr6JLI0le7WLKJklZSZYJMxtaah5osaQ")
     app = ApplicationBuilder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("getid", get_chat_id))
